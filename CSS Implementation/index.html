@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Example</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .internal-box {
+            border: 2px solid ;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <header style="font-size: 32px; letter-spacing: 2px;">
+        Welcome to the CSS Demonstration
+    </header>
+
+    <div class="internal-box">
+        <h2>This section uses Internal CSS</h2>
+        <p>The styles applied here are written inside the <code>style</code> tag in the <code>head</code> section of the HTML file.</p>
+    </div>
+
+    <div class="external-box">
+        <h2>This section uses External CSS</h2>
+        <p>The styles applied here are written in the external <code>styles.css</code> file.</p>
+    </div>
+
+    <div style="border: 2px solid red; padding: 15px; margin: 20px;">
+        <h2>Inline CSS Example</h2>
+        <p>This section is styled using inline CSS directly in the HTML elements via the <code>style</code> attribute.</p>
+    </div>
+
+</body>
+</html>

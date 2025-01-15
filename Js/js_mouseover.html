@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hover Effect</title>
+  <style>
+    .hover-content {
+      display: none;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mainContent" onmouseover="showContent()" onmouseout="hideContent()">
+  <h2>Hover over this content</h2>
+</div>
+
+<div id="hoverContent" class="hover-content">
+  <img src="photo.jpeg" alt="New Image">
+  <p>New text on hover</p>
+</div>
+
+<script>
+  function showContent() {
+    document.getElementById('hoverContent').style.display = 'block';
+  }
+
+  function hideContent() {
+    document.getElementById('hoverContent').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

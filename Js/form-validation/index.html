@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Doc</title>
+  </head>
+  <body>
+    <h2>Fill the form below</h2>
+    <div class="container">
+      <form action="" id="myForm" method="post">
+        <label for="Name">Full Name </label>
+        <input type="text" id="name" required />
+        <br /><br />
+        <label for="DOB">Date of Birth </label>
+        <input type="date" id="dob" required />
+        <br /><br />
+        <label for="email">Email</label>
+        <input type="email" required id="email" />
+        <br /><br />
+        <label for="phone">Phone Number</label>
+        <input type="number" id="phone" required />
+        <br /><br />
+        <label for="uname">Username</label>
+        <input type="text" id="username" required />
+        <br /><br />
+        <label for="pass">Password</label>
+        <input type="password" name="" id="pass" required />
+        <br /><br />
+        <label for="confirm-pass">Confirm Password</label>
+        <input type="password" name="" id="confirm-pass" required />
+        <br /><br />
+        <input type="submit" value="Confirm Data" />
+      </form>
+    </div>
+  </body>
+
+
+  <script>
+    let form = document.getElementById("myForm");
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const isValid = validateForm();
+
+      if (isValid) {
+        alert("Success");
+        form.reset();
+      }
+    });
+
+    function validateForm() {
+      let name = document.getElementById("name").value.trim();
+      let dob = document.getElementById("dob").value;
+      let email = document.getElementById("email").value.trim();
+      let phone = document.getElementById("phone").value.trim();
+      let username = document.getElementById("username").value.trim();
+      let password = document.getElementById("pass").value.trim();
+      let confirmPassword = document.getElementById("confirm-pass").value.trim();
+      let isValid = true;
+
+      if (name === "") {
+        alert("Invalid Name");
+        isValid = false;
+      }
+
+      if (phone.length !== 10 || isNaN(phone)) {
+        alert("Invalid Phone Number");
+        isValid = false;
+      }
+
+      if (username.length < 4) {
+        alert("Username must be at least 4 characters long");
+        isValid = false;
+      }
+
+      if (password.length < 8) {
+        alert("Password must be at least 8 characters long");
+        isValid = false;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        isValid = false;
+      }
+
+      return isValid;
+    }
+  </script>
+
+  
+</html>

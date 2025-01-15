@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Element Example</title>
+</head>
+<body>
+    <h1>Select an Option</h1>
+    <p>Please select an option from the dropdown menu:</p>
+    <select id="mySelect" onchange="myFunction()">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <p id="result"></p>
+
+    <script>
+        const selectElement = document.getElementById('mySelect');
+        const resultElement = document.getElementById('result');
+
+        function myFunction() {
+            const selectedValue = selectElement.value;
+            resultElement.innerHTML = "You selected " + selectedValue;
+        }
+    </script>
+</body>
+</html>
