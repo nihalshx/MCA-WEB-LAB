@@ -19,7 +19,7 @@ To get started with this repository:
 
 1. Clone the repository to your local machine using the command:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/nihalshx/MCA-WEB-LAB.git
    ```
 
 2. Navigate to the desired folder containing the program you want to explore.
