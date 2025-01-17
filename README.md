@@ -32,7 +32,7 @@ Ensure you have the following installed on your system:
 
 - A modern web browser (e.g., Google Chrome, Mozilla Firefox).
 - A text editor or IDE (e.g., Visual Studio Code, Sublime Text).
-- Local server setup tools (e.g., XAMPP, WAMP, or Node.js).
+- Local server setup tools (e.g., XAMPP or WAMP).
 
 
 
