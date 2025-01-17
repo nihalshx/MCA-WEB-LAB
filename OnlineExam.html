@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Online Exam</h1>
+        <form id="examForm">
+            <div class="question">
+                <p>1. Capital of France?</p>
+                <label><input type="radio" name="q1" value="Paris"> Paris</label>
+                <label><input type="radio" name="q1" value="Berlin"> Berlin</label>
+                <label><input type="radio" name="q1" value="Madrid"> Madrid</label>
+            </div>
+            <div class="question">
+                <p>2. Red Planet?</p>
+                <label><input type="radio" name="q2" value="Mars"> Mars</label>
+                <label><input type="radio" name="q2" value="Jupiter"> Jupiter</label>
+                <label><input type="radio" name="q2" value="Venus"> Venus</label>
+            </div>
+            <div class="question">
+                <p>3. Who wrote 'Romeo and Juliet'?</p>
+                <label><input type="radio" name="q3" value="Shakespeare"> Shakespeare</label>
+                <label><input type="radio" name="q3" value="Dickens"> Dickens</label>
+                <label><input type="radio" name="q3" value="Austen"> Austen</label>
+            </div>
+            <button type="button" onclick="submitExam()">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function submitExam() {
+            const answers = {
+                q1: "Paris",
+                q2: "Mars",
+                q3: "Shakespeare"
+            };
+
+            let score = 0;
+            const form = document.getElementById("examForm");
+            const formData = new FormData(form);
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                if (formData.get(question) === correctAnswer) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.textContent = `Score: ${score} / 3`;
+        }
+    </script>
+</body>
+</html>
